@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="{% static 'quicktix/css/login.css' %}">
+    <title>QuickTix</title> 
+</head>
+
+<body>
+<div class="sidebar">
+    <div class="logo-details">
+        <i class="fa fa-train" aria-hidden="true"></i>
+        <span class="logo-name">QuickTix</span>
+    </div>
+
+    <ul class="nav-links">
+        <li>
+            <a href="#">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                <span class="link-name">Home</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link-name" href="">Make a Booking</a></li>
+            </ul>
+            </li>
+
+        <li>
+            <div class="iocn-link">
+            <a href="#">
+                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                <span class="link-name">Make a Booking</span>
+            </a>
+            <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link-name" href="#">Make a Booking</a></li>
+                <li><a href="#">LAG - ABK</a></li>
+                <li><a href="#">ABK - LAG</a></li>
+                <li><a href="#">ABK - IBD</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="iocn-link">
+            <a href="#">
+                <i class="fa fa-history" aria-hidden="true"></i>
+                <span class="link-name">History</span>
+            </a>
+            <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link-name" href="#">History</a></li>
+                <li><a href="#">All Trips</a></li>
+                <li><a href="#">From Lagos</a></li>
+                <li><a href="#">From Abeokuta</a></li>
+                <li><a href="#">From Ibadan</a></li>
+            </ul>
+        </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span class="link-name">My Profile</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="">My Profile</a></li>
+                </ul>
+                </li>
+
+        <li>
+            <a href="#">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <span class="link-name">Logout</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link-name" href="">Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<section class="home-section">
+    <div class="home-content">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <span class="text">Booking Area</span>
+    </div>
+</section>
+
+
+<script>
+    let arrow = document.querySelectorAll (".arrow");
+    for (var i = 0; i < arrow.length; i++){
+        arrow[i].addEventListener("click", (e)=>{
+            let arrowParent = e.target.parentElement.parentElement;
+            arrowParent.classList.toggle("showMenu");
+        });
+    }
+
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".fa-bars");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

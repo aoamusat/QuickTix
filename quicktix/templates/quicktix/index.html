@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="{% static 'quicktix/css/style.css' %}">
+    <title>QuickTix</title> 
+</head>
+<body>
+    <!---Navbar-->
+    {% include 'quicktix/partials/navheader.html' %}
+
+    <!--Showcase section-->
+    <section class="showcase">
+        <div class="container grid">
+            <div class="showcase-text">
+                <h1>Travel the smarter way</h1>
+                <p>Save time, effort and money. Book a train ticket from the comfort of your home. 
+                </p>
+                <a href="features/" class="btn btn-outline">Learn More</a>
+            </div>
+            <div class="showcase-form card">
+                <h2>Create an Account</h2>
+                    <p class="hidden">
+                        <label>Don't fill this if you are human: <input name="bot-field" /></label>
+                    </p>
+                    <div class="form-control">
+                        <input type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" name="password" placeholder="Password" required>
+                    </div>
+                    <input type="submit" value="Create" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!--CLI-->
+    <section class="cli">
+        <h1 class="lg">Just 4 Easy Steps!</h1>
+        <div class="container grid">
+            <img src="{% static 'quicktix/img/adventure.svg' %}" alt="">
+            <div class="card">
+                <h3>Step 1: Choose your preferred destination</h3>
+            </div>
+            <div class="card">
+                <h3>Step 2: Make a Booking</h3>
+            </div>
+            <div class="card">
+                <h3>Step 3: Get a ticket instantly</h3>
+            </div>
+            <div class="card">
+                <h3>Step 4: All set and ready to travel</h3>
+            </div>
+        </div>
+    </section>
+
+    <!--Schedule area-->
+    <section class="features-head bg-primary py-3">
+        <div class="container grid">
+            <div>
+                <h1 class="lg">Train Schedule</h1>
+                <p class="lead">Get familiar with the train schedule, book a ticket ahead</p>
+            </div>
+            <img src="{% static 'quicktix/img/schedule.svg' %}" alt="">
+        </div>
+    </section>
+    <section class="schedule-main my-4">
+        <div class="container grid">
+            <div class="card bg-light p-3">
+                <h3 class="my-2">ABEOKUTA - LAGOS DEPARTURE TIMES</h3>
+                <h4>WEEKLY SCHEDULE</h4>
+                <nav>
+                    <ul>
+                        <li>Monday 9am & 5pm</a></li>
+                        <li>Tuesday 9am & 5pm</a></li>
+                        <li>Wednesday 9am & 5pm</a></li>
+                        <li>Thursday 9am & 5pm</a></li>
+                        <li>Friday 9am & 5pm</a></li>
+                        <li>Saturday 9:30am & 7pm</a></li>
+                        <li>Sunday 9am & 5pm</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="card bg-light p-3">
+                <h3 class="my-2">ABEOKUTA - IBADAN DEPARTURE TIMES</h3>
+                <h4>WEEKLY SCHEDULE</h4>
+                <nav>
+                    <ul>
+                        <li>Monday 9:30am & 5:30pm</a></li>
+                        <li>Tuesday 9:30am & 5:30pm</a></li>
+                        <li>Wednesday 9:30am & 5:30pm</a></li>
+                        <li>Thursday 9:30am & 5:30pm</a></li>
+                        <li>Friday 9:30am & 5:30pm</a></li>
+                        <li>Saturday 10am & 7:30pm</a></li>
+                        <li>Sunday 9:30am & 5:30pm</a></li>
+                    </ul>
+                </nav>
+            </div>
+            </div>
+            </section>
+
+    <!--Cloud-->
+    <section class="cloud bg-primary my-2 py-2">
+        <div class="container grid">
+            <div class="text-center">
+                <h2 class="lg">Enjoy Comfort</h2>
+                <p class="lead my-1">Journey around with a click from your phone! <br>
+                    Fast, Efficient and Easy</p>
+                    <a href="login/" class="btn btn-dark">Make a Booking</a>
+            </div>
+            <img src="{% static 'quicktix/img/destination.svg' %}" alt="" id="image">
+        </div>
+    </section>
+
+    <!--Supported payment-->
+    <section class="payment">
+        <h2 class="md text-center my-2">
+            Supported Payment Platforms
+        </h2>
+        <div class="container flex">
+            <div class="card">
+                <h4>Mastercard</h4>
+                <img src="{% static 'quicktix/img/mastercard-4.svg' %}" alt="">
+            </div>
+            <div class="card">
+                <h4>Paystack</h4>
+                <img src="{% static 'quicktix/img/paystack-2.svg' %}" alt="">
+            </div>
+            <div class="card">
+                <h4>Stripe</h4>
+                <img src="{% static 'quicktix/img/stripe-4.svg' %}" alt="">
+            </div>
+            <div class="card">
+                <h4>Visa</h4>
+                <img src="{% static 'quicktix/img/visa.svg' %}" alt="">
+            </div>
+            <div class="card">
+                <h4>Flutterwave</h4>
+                <img src="{% static 'quicktix/img/flutterwave-2.svg' %}" alt="">
+            </div>
+            <div class="card">
+                <h4>Apple Pay</h4>
+                <img src="{% static 'quicktix/img/apple-13.svg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <!--Footer -->
+    <footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>QuickTix</h1>
+                <p>Copyright &copy; 2022</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="features/">Features</a></li>
+                </ul>
+            </nav>
+
+            <div class="social">
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="{% static 'quicktix/css/login.css' %}">
+    <title>QuickTix</title> 
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form action="#" method="post"> 
+                    {% csrf_token %}
+                    <div class="input-field">
+                        <input type="email" placeholder="Enter your email" name = "email" required>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password" name="password" required>
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <i class="fa fa-eye-slash showHidePw" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck" name="logcheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Don't have an account?
+                        <a href="#" class="text signup-link">Register now</a>
+                    </span>
+                </div>
+            </div>
+
+        
+
+            <!-- Registration Form-->
+            <div class="form signup">
+                <span class="title">Registration</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your name" required>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Create a password" required>
+                        <i class="fa fa-lock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Confirm password" required>
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <i class="fa fa-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon">
+                            <label for="termCon" class="text">I accept all terms and conditions</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Signup">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Already a member?
+                        <a href="#" class="text login-link">Login Now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+
+<script>
+    const container = document.querySelector(".container"),
+      pwShowHide = document.querySelectorAll(".showHidePw"),
+      pwFields = document.querySelectorAll(".password"),
+      signUp = document.querySelector(".signup-link"),
+      login = document.querySelector(".login-link");
+
+    //   js code to show/hide password and change icon
+    pwShowHide.forEach(eyeIcon =>{
+        eyeIcon.addEventListener("click", ()=>{
+            pwFields.forEach(pwField =>{
+                if(pwField.type ==="password"){
+                    pwField.type = "text";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    })
+                }else{
+                    pwField.type = "password";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    })
+                }
+            }) 
+        })
+    })
+
+    // js code to appear signup and login form
+    signUp.addEventListener("click", ( )=>{
+        container.classList.add("active");
+    });
+    login.addEventListener("click", ( )=>{
+        container.classList.remove("active");
+    });
+
+</script>
+</body>
+</html>
+
