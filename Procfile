@@ -1,1 +1,1 @@
-web: gunicorn quick-tix.wsgi
+web: gunicorn ticket.wsgi
