@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ly!-gtc7dpg#4%fn5-sf4#0_ij3j(g_e3d-xl_qhz7i#1j6k$=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['quick-tix.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['quick-tix.herokuapp.com', 'localhost', '127.0.0.1', 'quicktix-v2.herokuapp.com', '*.herokuapp.com']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
