@@ -55,5 +55,4 @@ class LoginView(View):
             return redirect(self.intended)
         else:
             messages.error(request, "Invalid username or password!")
-            print(messages.get_messages())
             return redirect("%s" % ("/login"))
