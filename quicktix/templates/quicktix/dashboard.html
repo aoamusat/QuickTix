@@ -5,298 +5,170 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
-     crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://kit.fontawesome.com/841e909f20.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'quicktix/css/dash.css' %}">
     <title>QuickTix</title> 
 </head>
 
 <body>
-<!--Side Navbar-->
-<div class="sidebar">
-    <div class="logo-details">
-        <i class="fa fa-train" aria-hidden="true"></i>
-        <span class="logo-name">QuickTix</span>
-    </div>
-
-    <ul class="nav-links">
-        <li>
-            <a href="#">
-                <i class="fa fa-home" aria-hidden="true"></i>
-                <span class="link-name">Home</span>
-            </a>
-            <ul class="sub-menu blank">
-                <li><a class="link-name" href="">Home</a></li>
-            </ul>
-            </li>
-
-        <li>
-            <div class="iocn-link">
-            <a href="#">
-                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                <span class="link-name">Make a Booking</span>
-            </a>
-            <ul class="sub-menu blank">
-                <li><a class="link-name" href="#">Make a Booking</a></li>
-            </ul>
-        </li>
-
-        <li>
-            <div class="iocn-link">
-            <a href="#">
-                <i class="fa fa-history" aria-hidden="true"></i>
-                <span class="link-name">History</span>
-            </a>
-            <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
-            </div>
-            <ul class="sub-menu">
-                <li><a class="link-name" href="#">History</a></li>
-                <li><a href="#">All Trips</a></li>
-                <li><a href="#">From Lagos</a></li>
-                <li><a href="#">From Abeokuta</a></li>
-                <li><a href="#">From Ibadan</a></li>
-            </ul>
-        </li>
-
-            <li>
-                <a href="#">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <span class="link-name">My Profile</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link-name" href="">My Profile</a></li>
-                </ul>
-                </li>
-
-        <li>
-            <a href="#">
-                <i class="fa fa-sign-out" aria-hidden="true"></i>
-                <span class="link-name">Logout</span>
-            </a>
-            <ul class="sub-menu blank">
-                <li><a class="link-name" href="">Logout</a></li>
-            </ul>
-        </li>
-    </ul>
-</div>
-
-<!--Booking Area-->
-<section class="home-section">
-    <div class="home-content">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-        <span class="text">Booking Area</span>
-    </div>
-
-<!--TEst code-->
-<div class="container">
-    <header>Registration</header>
-
-    <form action="#">
-        <div class="form first">
-            <div class="details personal">
-                <span class="title">Personal Details</span>
-
-                <div class="fields">
-                    <div class="input-field">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Enter your name" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Date of Birth</label>
-                        <input type="date" placeholder="Enter birth date" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Email</label>
-                        <input type="text" placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Mobile Number</label>
-                        <input type="number" placeholder="Enter mobile number" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Gender</label>
-                        <select required>
-                            <option disabled selected>Select gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Others</option>
-                        </select>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Occupation</label>
-                        <input type="text" placeholder="Enter your ccupation" required>
-                    </div>
-                </div>
-            </div>
-
-            <div class="details ID">
-                <span class="title">Identity Details</span>
-
-                <div class="fields">
-                    <div class="input-field">
-                        <label>ID Type</label>
-                        <input type="text" placeholder="Enter ID type" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>ID Number</label>
-                        <input type="number" placeholder="Enter ID number" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Issued Authority</label>
-                        <input type="text" placeholder="Enter issued authority" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Issued State</label>
-                        <input type="text" placeholder="Enter issued state" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Issued Date</label>
-                        <input type="date" placeholder="Enter your issued date" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Expiry Date</label>
-                        <input type="date" placeholder="Enter expiry date" required>
-                    </div>
-                </div>
-
-                <button class="nextBtn">
-                    <span class="btnText">Next</span>
-                    <i class="uil uil-navigator"></i>
-                </button>
-            </div> 
+    <!--Side Navbar-->
+      <div class="sidebar">
+        <div class="logo-details">
+            <i class="fa-solid fa-train-subway"></i>
+          <span class="logo_name">QuickTix</span>
         </div>
+          <ul class="nav-links">
+            <li>
+              <a href="#" class="active">
+                <i class="fa-solid fa-cart-plus" aria-hidden="true"></i>
+                <span class="links_name">Make a Booking</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-box-archive"></i>
+                <span class="links_name">History</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-user"></i>
+                <span class="links_name">My Profile</span>
+              </a>
+            </li>
+            <li class="log_out">
+              <a href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="links_name">Log out</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+    <!--Side navbar end-->
 
-        <div class="form second">
-            <div class="details address">
-                <span class="title">Address Details</span>
 
-                <div class="fields">
-                    <div class="input-field">
-                        <label>Address Type</label>
-                        <input type="text" placeholder="Permanent or Temporary" required>
-                    </div>
+    <!--Booking area code-->
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='fa-solid fa-bars sidebarBtn'></i>
+        <span class="dashboard">Booking Area</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <!--<div class="profile-details">
+        <img src="images/profile.jpg" alt="">
+        <span class="admin_name">Hamaamah</span>
+        <i class='fa fa-chevron-down' ></i>
+      </div>-->
+    </nav>
 
-                    <div class="input-field">
-                        <label>Nationality</label>
-                        <input type="text" placeholder="Enter nationality" required>
-                    </div>
+<div class="wrapper">
+    <div class="container">
+      <header>Your Journey Begins</header>
 
-                    <div class="input-field">
-                        <label>State</label>
-                        <input type="text" placeholder="Enter your state" required>
-                    </div>
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Details</span>
 
-                    <div class="input-field">
-                        <label>District</label>
-                        <input type="text" placeholder="Enter your district" required>
-                    </div>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Origin</label>
+                            <select required>
+                                <option disabled selected>From where?</option>
+                                <option>Lagos</option>
+                                <option>Abeokuta</option>
+                                <option>Ibadan</option>
+                            </select>
+                        </div>
 
-                    <div class="input-field">
-                        <label>Block Number</label>
-                        <input type="number" placeholder="Enter block number" required>
-                    </div>
+                        <div class="input-field">
+                            <label>Destination</label>
+                            <select required>
+                                <option disabled selected>To where?</option>
+                                <option>Lagos</option>
+                                <option>Abeokuta</option>
+                                <option>Ibadan</option>
+                            </select>
+                        </div>
 
-                    <div class="input-field">
-                        <label>Ward Number</label>
-                        <input type="number" placeholder="Enter ward number" required>
+                        <div class="input-field">
+                            <label>Preferred class</label>
+                            <select required>
+                                <option disabled selected>Choose</option>
+                                <option>Standard</option>
+                                <option>Business</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Next of Kin</label>
+                            <input type="text" placeholder="father, mother etc" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Contact</label>
+                            <input type="number" placeholder="contact" required>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="details family">
-                <span class="title">Family Details</span>
+                <div class="details ID">
+                    <span class="title">Means of Identification</span>
 
-                <div class="fields">
-                    <div class="input-field">
-                        <label>Father Name</label>
-                        <input type="text" placeholder="Enter father name" required>
+                    <div class="fields">
+                        <div class="input-field">
+                        <label>ID type</label>
+                            <select required>
+                                <option disabled selected>Select</option>
+                                <option>Driver's license</option>
+                                <option>Business</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>ID Number</label>
+                            <input type="number" placeholder="Enter ID number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Issued Authority</label>
+                            <input type="text" placeholder="Enter issued authority" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Issued State</label>
+                            <input type="text" placeholder="Enter issued state" required>
+                        </div>
+
                     </div>
 
-                    <div class="input-field">
-                        <label>Mother Name</label>
-                        <input type="text" placeholder="Enter mother name" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Grandfather</label>
-                        <input type="text" placeholder="Enter grandfther name" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Spouse Name</label>
-                        <input type="text" placeholder="Enter spouse name" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Father in Law</label>
-                        <input type="text" placeholder="Father in law name" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Mother in Law</label>
-                        <input type="text" placeholder="Mother in law name" required>
-                    </div>
-                </div>
-
-                <div class="buttons">
-                    <div class="backBtn">
-                        <i class="uil uil-navigator"></i>
-                        <span class="btnText">Back</span>
-                    </div>
-                    
-                    <button class="sumbit">
+                    <button class="nextBtn">
                         <span class="btnText">Submit</span>
                         <i class="uil uil-navigator"></i>
                     </button>
-                </div>
-            </div> 
+                </div> 
+              </div>
+      
+        </form>
         </div>
-    </form>
 </div>
 </section>
-<!--TEst code-->
 
-
-<script>
-    let arrow = document.querySelectorAll (".arrow");
-    for (var i = 0; i < arrow.length; i++){
-        arrow[i].addEventListener("click", (e)=>{
-            let arrowParent = e.target.parentElement.parentElement;
-            arrowParent.classList.toggle("showMenu");
-        });
-    }
-
-    let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".fa-bars");
-    console.log(sidebarBtn);
-    sidebarBtn.addEventListener("click", ()=>{
-        sidebar.classList.toggle("close");
-    });
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("fa-bars" ,"fa-bars-alt-right");
+}else
+  sidebarBtn.classList.replace("fa-bars-alt-right", "fa-bars");
+}
+ </script>
+    
 </body>
 </html>
