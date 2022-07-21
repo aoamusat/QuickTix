@@ -332,8 +332,7 @@ form .fields .input-field{
   .sidebar.active ~ .home-section nav .profile-details{
     display: none;
   }
-}*/
-
+}
 @media (max-width: 750px) {
     .container form{
         overflow-y: scroll;
@@ -376,4 +375,4 @@ form .fields .input-field{
     left: 60px;
     width: calc(100% - 60px);
   }
-}
+}*/
