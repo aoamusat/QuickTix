@@ -12,7 +12,9 @@
     <title>QuickTix</title> 
 </head>
 
+
 <body>
+<!--Login form-->
     <div class="container">
         <div class="forms">
             <div class="form login">
@@ -35,7 +37,6 @@
                             <input type="checkbox" id="logCheck" name="logcheck">
                             <label for="logCheck" class="text">Remember me</label>
                         </div>
-                        
                         <a href="#" class="text">Forgot password?</a>
                     </div>
 
@@ -55,15 +56,16 @@
 
             <!-- Registration Form-->
             <div class="form signup">
-                <span class="title">Registration</span>
+                <span class="title">Register</span>
 
-                <form action="#">
+                <form action='' method="post">
+                    {% csrf_token %}
                     <div class="input-field">
                         <input type="text" placeholder="Enter your name" required>
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your email" required>
+                        <input type="email" placeholder="Enter your email" required>
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                     </div>
                     <div class="input-field">
@@ -84,12 +86,12 @@
                     </div>
 
                     <div class="input-field button">
-                        <input type="button" value="Signup">
+                        <input type="submit" value="Signup">
                     </div>
                 </form>
 
                 <div class="login-signup">
-                    <span class="text">Already a member?
+                    <span class="text">Already have an account?
                         <a href="#" class="text login-link">Login Now</a>
                     </span>
                 </div>
@@ -106,7 +108,7 @@
       signUp = document.querySelector(".signup-link"),
       login = document.querySelector(".login-link");
 
-    //   js code to show/hide password and change icon
+    //   js code to show/hide password
     pwShowHide.forEach(eyeIcon =>{
         eyeIcon.addEventListener("click", ()=>{
             pwFields.forEach(pwField =>{
@@ -114,20 +116,20 @@
                     pwField.type = "text";
 
                     pwShowHide.forEach(icon =>{
-                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                        icon.classList.replace("fa-eye-slash", "fa-eye");
                     })
                 }else{
                     pwField.type = "password";
 
                     pwShowHide.forEach(icon =>{
-                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                        icon.classList.replace("fa-eye", "fa-eye-slash");
                     })
                 }
             }) 
         })
     })
 
-    // js code to appear signup and login form
+    // js code to switch signup and login forms
     signUp.addEventListener("click", ( )=>{
         container.classList.add("active");
     });
