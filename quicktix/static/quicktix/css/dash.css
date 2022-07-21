@@ -272,7 +272,7 @@ form .fields .input-field{
   cursor: pointer;
 }
 
-/* Responsive Media Query */
+/* Responsive Media Query 
 @media (max-width: 1240px) {
   .sidebar{
     width: 60px;
@@ -285,7 +285,7 @@ form .fields .input-field{
     left: 60px;
   }
   .sidebar.active ~ .home-section{
-    /* width: calc(100% - 220px); */
+    /* width: calc(100% - 220px); 
     overflow: hidden;
     left: 220px;
   }
@@ -298,7 +298,7 @@ form .fields .input-field{
     left: 220px;
   }
 }
-/*@media (max-width: 1150px) {
+@media (max-width: 1150px) {
   .wrapper{
     flex-direction: column;
     overflow-x:scroll;
