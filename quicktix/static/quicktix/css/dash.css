@@ -213,17 +213,17 @@ form.secActive .form.first{
   margin-bottom: 8px;
   font-size: 16px;
   font-weight: 500;
-  margin: 10px 0 6px 0;
+  margin: 20px 0 6px 0;
   color: #333;
 }
 .container form .fields{
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 form .fields .input-field{
-  display: flex;
+  display: block;
   width: calc(100% / 3 - 15px);
   flex-direction: column;
   margin: 4px 0;
@@ -299,16 +299,9 @@ form .fields .input-field{
   }
 }
 /*@media (max-width: 1150px) {
-  .home-content .sales-boxes{
+  .wrapper{
     flex-direction: column;
-  }
-  .home-content .sales-boxes .box{
-    width: 100%;
-    overflow-x: scroll;
-    margin-bottom: 30px;
-  }
-  .home-content .sales-boxes .top-sales{
-    margin: 0;
+    overflow-x:scroll;
   }
 }
 /*@media (max-width: 1000px) {
@@ -339,7 +332,26 @@ form .fields .input-field{
   .sidebar.active ~ .home-section nav .profile-details{
     display: none;
   }
+}*/
+
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
 }
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
+}
+
 
   @media (max-width: 400px) {
   .sidebar{
@@ -364,4 +376,4 @@ form .fields .input-field{
     left: 60px;
     width: calc(100% - 60px);
   }
-}*/
+}
