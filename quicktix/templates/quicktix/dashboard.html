@@ -46,9 +46,8 @@
       </div>
     <!--Side navbar end-->
 
-
-    <!--Booking area code-->
-  <section class="home-section">
+<!--Booking area code-->
+<section class="home-section">
     <nav>
       <div class="sidebar-button">
         <i class='fa-solid fa-bars sidebarBtn'></i>
@@ -58,16 +57,12 @@
         <input type="text" placeholder="Search...">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
-      <!--<div class="profile-details">
-        <img src="images/profile.jpg" alt="">
-        <span class="admin_name">Hamaamah</span>
-        <i class='fa fa-chevron-down' ></i>
-      </div>-->
     </nav>
 
+<!--Body of booking area-->
 <div class="wrapper">
     <div class="container">
-      <header>Your Journey Begins</header>
+        <header>Your Journey Begins</header>
 
         <form action="#">
             <div class="form first">
@@ -78,7 +73,7 @@
                         <div class="input-field">
                             <label>Origin</label>
                             <select required>
-                                <option disabled selected>From where?</option>
+                                <option disabled>From where?</option>
                                 <option>Lagos</option>
                                 <option>Abeokuta</option>
                                 <option>Ibadan</option>
@@ -88,7 +83,7 @@
                         <div class="input-field">
                             <label>Destination</label>
                             <select required>
-                                <option disabled selected>To where?</option>
+                                <option disabled>To where?</option>
                                 <option>Lagos</option>
                                 <option>Abeokuta</option>
                                 <option>Ibadan</option>
@@ -98,10 +93,15 @@
                         <div class="input-field">
                             <label>Preferred class</label>
                             <select required>
-                                <option disabled selected>Choose</option>
+                                <option disabled>Choose</option>
                                 <option>Standard</option>
                                 <option>Business</option>
                             </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Departure date</label>
+                            <input type="date" placeholder="Select" required>
                         </div>
 
                         <div class="input-field">
@@ -111,7 +111,7 @@
 
                         <div class="input-field">
                             <label>Contact</label>
-                            <input type="number" placeholder="contact" required>
+                            <input type="number" placeholder="next of kin contact" required>
                         </div>
                     </div>
                 </div>
@@ -123,9 +123,9 @@
                         <div class="input-field">
                         <label>ID type</label>
                             <select required>
-                                <option disabled selected>Select</option>
+                                <option disabled>Select</option>
                                 <option>Driver's license</option>
-                                <option>Business</option>
+                                <option>School ID</option>
                             </select>
                         </div>
 
@@ -135,21 +135,17 @@
                         </div>
 
                         <div class="input-field">
-                            <label>Issued Authority</label>
-                            <input type="text" placeholder="Enter issued authority" required>
+                            <label>Email address</label>
+                            <input type="text" placeholder="email" required>
                         </div>
-
-                        <div class="input-field">
-                            <label>Issued State</label>
-                            <input type="text" placeholder="Enter issued state" required>
-                        </div>
-
                     </div>
 
-                    <button class="nextBtn">
-                        <span class="btnText">Submit</span>
+                    <div class="nextBtn btnText">
+                    <!--<button class="nextBtn">-->
+                        <input type="submit" value="Book ticket"></input>
                         <i class="uil uil-navigator"></i>
                     </button>
+                    </div>
                 </div> 
               </div>
       
