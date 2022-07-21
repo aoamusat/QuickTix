@@ -78,13 +78,15 @@ WSGI_APPLICATION = 'ticket.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'newdb.sqlite3',
     }
 }
 
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+
+AUTH_USER_MODEL = 'quicktix.MyUser'
 
 AUTH_PASSWORD_VALIDATORS = [
     {

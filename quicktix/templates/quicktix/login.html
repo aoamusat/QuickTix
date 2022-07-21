@@ -61,7 +61,11 @@
                 <form action='' method="post">
                     {% csrf_token %}
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your name" required>
+                        <input type="text" placeholder="Enter your first name" required>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter last your name" required>
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </div>
                     <div class="input-field">
