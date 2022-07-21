@@ -154,14 +154,15 @@
 </section>
 
   <script>
-   let sidebar = document.querySelector(".sidebar");
+    // js code to switch collapse booking area
+let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".sidebarBtn");
 sidebarBtn.onclick = function() {
   sidebar.classList.toggle("active");
   if(sidebar.classList.contains("active")){
-  sidebarBtn.classList.replace("fa-bars" ,"fa-bars-alt-right");
+  sidebarBtn.classList.replace("fa-bars" ,"fa-bars-sort");
 }else
-  sidebarBtn.classList.replace("fa-bars-alt-right", "fa-bars");
+  sidebarBtn.classList.replace("fa-bars-sort", "fa-bars");
 }
  </script>
     
