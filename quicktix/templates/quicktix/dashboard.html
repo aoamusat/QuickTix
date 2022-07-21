@@ -83,35 +83,31 @@
                         <div class="input-field">
                             <label>Destination</label>
                             <select required>
-                                <option disabled>To where?</option>
+                                <option disabled selected>To where?</option>
                                 <option>Lagos</option>
                                 <option>Abeokuta</option>
                                 <option>Ibadan</option>
                             </select>
                         </div>
 
+<!--code to geenerate ticket cost-->
                         <div class="input-field">
                             <label>Preferred class</label>
-                            <select required>
-                                <option disabled>Choose</option>
-                                <option>Standard</option>
-                                <option>Business</option>
+                            <select name="tot_pin_requested" onchange="calculateAmount(this.value)" required>
+                                <option disabled selected>Choose</option>
+                                <option value="2000">Standard</option>
+                                <option value="3000">Business</option>
                             </select>
                         </div>
 
                         <div class="input-field">
+                            <label>Cost</label>
+                            <input name="tot_amount" id="tot_amount" type="text" readonly>
+                        </div>
+<!--end code-->
+                        <div class="input-field">
                             <label>Departure date</label>
                             <input type="date" placeholder="Select" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Next of Kin</label>
-                            <input type="text" placeholder="father, mother etc" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Contact</label>
-                            <input type="number" placeholder="next of kin contact" required>
                         </div>
                     </div>
                 </div>
@@ -139,6 +135,16 @@
                             <label>Email address</label>
                             <input type="text" placeholder="Email" required>
                         </div>
+
+                        <div class="input-field">
+                            <label>Next of Kin</label>
+                            <input type="text" placeholder="father, mother etc" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Contact</label>
+                            <input type="number" placeholder="next of kin contact" required>
+                        </div>
                     </div>
 
                     <button class="nextBtn">
@@ -163,6 +169,13 @@ sidebarBtn.onclick = function() {
   sidebarBtn.classList.replace("fa-bars" ,"fa-bars-sort");
 }else
   sidebarBtn.classList.replace("fa-bars-sort", "fa-bars");
+}
+
+//js code to display ticket prices
+function calculateAmount(val) {
+    var tot_price = val * 1;
+    var divobj = document.getElementById('tot_amount');
+    divobj.value = tot_price;
 }
  </script>
     
