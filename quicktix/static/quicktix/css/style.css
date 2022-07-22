@@ -100,11 +100,11 @@ img {
  }
 
  .showcase-form {
-     position: relative;
+     /*position: relative;
      top: 60px;
      height: 350px;
      width: 400px;
-     padding: 40px;
+     padding: 40px;*/
      z-index: 100;
      animation: slideInFromRight 1s ease-in;
  }
