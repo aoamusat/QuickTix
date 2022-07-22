@@ -1,8 +1,13 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.views import View
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import RegistrationForm
+
+
+User = get_user_model()
+
 
 # Create your views here.
 def homepage(request):
@@ -56,3 +61,37 @@ class LoginView(View):
         else:
             messages.error(request, "Invalid username or password!")
             return redirect("%s" % ("/login"))
+
+
+
+
+
+
+class RegisterView(View):
+    intended = None
+    model = User
+    template_name = "quicktix/login.html"
+
+    def get(self, request):
+        
+        if request.user.is_authenticated:
+            return redirect("/dashboard")
+        return render(request, self.template_name)
+
+    def post(self, request):
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form = form.clean()
+            user = User.objects.create(
+                form.get("email"),
+                form.get("phone"),
+                form.get("first_name"),
+                form.get("last_name"),
+                form.get("password")
+            )
+            try:
+                user.save()
+            except:
+                return redirect("/login")
+        else:
+            return redirect

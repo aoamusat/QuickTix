@@ -91,6 +91,8 @@ class Ticket(models.Model):
     next_of_kin = models.CharField(max_length=100)
     next_of_kin_contact = models.CharField(max_length=100)
     user = models.ForeignKey(MyUser, on_delete=models.DO_NOTHING)
+    payment_reference = models.CharField(max_length=100, null = True)
+    payment_status = models.CharField(max_length=100, null = True)
 
     def __str__(self) -> str:
         return f"{self.user.email} <{self.origin} - {self.destination}>"
