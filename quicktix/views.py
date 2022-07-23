@@ -1,9 +1,12 @@
 from django.contrib import messages
+from django.db import IntegrityError
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout, get_user_model
+from django.urls import reverse, reverse_lazy
 from django.views import View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import RegistrationForm
+from django.contrib import messages
 
 
 User = get_user_model()
@@ -62,18 +65,11 @@ class LoginView(View):
             messages.error(request, "Invalid username or password!")
             return redirect("%s" % ("/login"))
 
-
-
-
-
-
 class RegisterView(View):
-    intended = None
     model = User
     template_name = "quicktix/login.html"
 
     def get(self, request):
-        
         if request.user.is_authenticated:
             return redirect("/dashboard")
         return render(request, self.template_name)
@@ -82,16 +78,24 @@ class RegisterView(View):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form = form.clean()
-            user = User.objects.create(
-                form.get("email"),
-                form.get("phone"),
-                form.get("first_name"),
-                form.get("last_name"),
-                form.get("password")
-            )
+            try:
+                user = User.objects.create_user(
+                    form.get("email"),
+                    form.get("phone"),
+                    form.get("first_name"),
+                    form.get("last_name"),
+                    form.get("password")
+                )
+            except IntegrityError as e:
+                messages.error(request, "Email Already Exists!")
+                return redirect(reverse("QuickTix:user.register"))
             try:
                 user.save()
-            except:
-                return redirect("/login")
+                login(request, user)
+                return redirect(reverse("QuickTix:user.dashboard"))
+            except Exception as e:
+                messages.error(request, e)
+                return redirect(reverse("QuickTix:user.register"))
         else:
-            return redirect
+            messages.error(request, form.errors)
+            return redirect(reverse("QuickTix:user.register"))
