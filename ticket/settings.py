@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'ticket.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'newdb.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'quicktix',
+        'USER': 'test',
+        'PASSWORD': 'test',
+        'HOST': '34.133.134.172',
+        'PORT': '3306',
     }
 }
 

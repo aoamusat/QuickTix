@@ -11,4 +11,5 @@ urlpatterns = [
     path("register/", view=views.RegisterView.as_view(), name='user.register'),
     path("logout/", view=views.logout_user, name='user.logout'),
     path("dashboard/", view=views.DashboardIndexView.as_view(), name='user.dashboard'),
+    path("ticket/create/<payment_ref>", view=views.TicketView.as_view(), name='ticket.create'),
 ]
