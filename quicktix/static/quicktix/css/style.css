@@ -95,9 +95,9 @@ img {
 
  }
 
- /*.showcase-text {
+ .showcase-text {
      animation: slideInFromLeft 1s ease-in;
- }*/
+ }
 
  .indeximg {
      /*position: relative;
