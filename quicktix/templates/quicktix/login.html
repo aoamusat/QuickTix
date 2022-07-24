@@ -19,11 +19,17 @@
         <div class="forms">
             <div class="form login">
                 <span class="title">Login</span>
-
-                <form action="" method="post"> 
+                {% if messages %}
+                    <ul style="list-style-type: none">
+                        {% for message in messages %}
+                            <li><span>{{ message }}</span></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <form action="{% url 'QuickTix:user.login' %}" method="POST"> 
                     {% csrf_token %}
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your email" name = "email" required>
+                        <input type="email" placeholder="Enter your email" name="email" required>
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                     </div>
                     <div class="input-field">
@@ -52,13 +58,17 @@
                 </div>
             </div>
 
-        
-
             <!-- Registration Form-->
             <div class="form signup">
                 <span class="title">Register</span>
-
-                <form action='' method="post">
+                {% if messages %}
+                    <ul style="list-style-type: none">
+                        {% for message in messages %}
+                        <li><span>{{ message }}</span></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <form action="{% url 'QuickTix:user.register' %}" method="POST">
                     {% csrf_token %}
                     <div class="input-field">
                         <input type="text" placeholder="Enter your first name" name = "first_name" required>
