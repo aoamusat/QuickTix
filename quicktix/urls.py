@@ -2,11 +2,14 @@ from django.urls import path
 
 from . import views
 
+app_name = "QuickTix"
+
 urlpatterns = [
     path("", view=views.homepage),
     path("features/", view=views.features),
-    path("login/", view=views.LoginView.as_view()),
-    path("logout/", view=views.logout_user),
-    path("dashboard/", view=views.DashboardIndexView.as_view()),
-
+    path("login/", view=views.LoginView.as_view(), name='user.login'),
+    path("register/", view=views.RegisterView.as_view(), name='user.register'),
+    path("logout/", view=views.logout_user, name='user.logout'),
+    path("dashboard/", view=views.DashboardIndexView.as_view(), name='user.dashboard'),
+    path("ticket/create/<payment_ref>", view=views.TicketView.as_view(), name='ticket.create'),
 ]

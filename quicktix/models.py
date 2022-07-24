@@ -1,4 +1,5 @@
 from statistics import mode
+import uuid
 from django.db import models
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
@@ -80,6 +81,7 @@ class MyUser(AbstractBaseUser):
         return self.is_admin
 
 class Ticket(models.Model):
+    ticket_id = models.UUIDField(verbose_name="Ticket ID", default=uuid.uuid4())
     origin = models.CharField(max_length=100)
     destination = models.CharField(max_length=100)
     ticket_class = models.CharField(max_length=100)
@@ -95,4 +97,4 @@ class Ticket(models.Model):
     payment_status = models.CharField(max_length=100, null = True)
 
     def __str__(self) -> str:
-        return f"{self.user.email} <{self.origin} - {self.destination}>"
+        return f"{self.user.email} - {self.ticket_id}"
