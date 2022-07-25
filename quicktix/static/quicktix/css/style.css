@@ -158,7 +158,7 @@ img {
 
 /*CLI */
 .cli {
-    padding-top: 60px;
+    padding-top: 80px;
     padding-bottom: 80px;
     animation: slideInFromBottom 1s ease-in;
 } 
