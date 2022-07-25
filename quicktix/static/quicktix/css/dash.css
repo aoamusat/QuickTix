@@ -159,7 +159,7 @@ nav .search-box .fa-magnifying-glass{
   border-radius: 6px;
   height: 50px;
   min-width: 190px;
-  padding: 0 15px 0 2px;
+  padding: 0 10px 0 2px;
 }
 nav .profile-details img{
   height: 40px;
@@ -300,6 +300,27 @@ form .fields .input-field{
   transition: all 0.3s linear;
   cursor: pointer;
 }
+.container form .btnText{
+  font-size: 14px;
+  font-weight: 400;
+}
+form button:hover{
+  background-color: #265df2;
+}
+form button i,
+form .backBtn i{
+  margin: 0 6px;
+}
+form .backBtn i{
+  transform: rotate(180deg);
+}
+form .buttons{
+  display: flex;
+  align-items: center;
+}
+form .buttons button , .backBtn{
+  margin-right: 14px;
+}
 
 /*Responsiveness*/
 @media (max-width: 1240px) {
@@ -329,11 +350,11 @@ form .fields .input-field{
 }
 
 @media (max-width: 750px) {
-  .container form{
+  .wrapper form{
       overflow-y: scroll;
   }
-  .container form::-webkit-scrollbar{
-     display:flex;
+  .wrapper form::-webkit-scrollbar{
+     display:block;
   }
   form .fields .input-field{
       width: calc(100% / 2 - 15px);
