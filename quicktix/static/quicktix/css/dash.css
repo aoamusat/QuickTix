@@ -333,7 +333,7 @@ form .fields .input-field{
       overflow-y: scroll;
   }
   .container form::-webkit-scrollbar{
-     display: none;
+     display:flex;
   }
   form .fields .input-field{
       width: calc(100% / 2 - 15px);
