@@ -15,7 +15,7 @@ idna = "==3.3"
 sqlparse = "==0.4.2"
 tzdata = "==2022.1"
 urllib3 = "==1.26.10"
-mysqlclient = "*"
+mysqlclient = "==2.1.1"
 
 [dev-packages]
 
