@@ -77,20 +77,12 @@ WSGI_APPLICATION = 'ticket.wsgi.application'
 
 DATABASES = {
     'default': {
-<<<<<<< HEAD
-        'ENGINE': 'db-mysql-nyc3-04151',
-=======
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'quicktix',
->>>>>>> c0619d88b538bc8710f989f88a04bf0f8dc8b7c8
         'USER': 'doadmin',
         'PASSWORD': 'AVNS_wivNedZPZZcu6BXa48n',
         'HOST': 'quick-tix-do-user-12121468-0.b.db.ondigitalocean.com',
         'PORT': '25060',
-<<<<<<< HEAD
-        'sslmode': 'REQUIRED',
-=======
->>>>>>> c0619d88b538bc8710f989f88a04bf0f8dc8b7c8
     }
 }
 
