@@ -79,10 +79,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'quicktix',
-        'USER': 'test',
-        'PASSWORD': 'test',
-        'HOST': '34.133.134.172',
-        'PORT': '3306',
+        'USER': 'doadmin',
+        'PASSWORD': 'AVNS_wivNedZPZZcu6BXa48n',
+        'HOST': 'quick-tix-do-user-12121468-0.b.db.ondigitalocean.com',
+        'PORT': '25060',
     }
 }
 
